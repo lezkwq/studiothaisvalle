@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,8 +21,12 @@
   a { color: #BE005D; text-decoration: none; }
   a:hover { color: #571B28; }
   img { display: block; }
+  section[id] { scroll-margin-top: 88px; }
   @keyframes tvFade { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"HealthClub","name":"Thais Valle Personal Studio para Mulheres","description":"Personal studio feminino em Rio do Sul, SC, com acompanhamento proximo e ambiente reservado para mulheres.","telephone":"+5547988482122","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"Rua Dom Bosco, 107","addressLocality":"Rio do Sul","addressRegion":"SC","postalCode":"89160-210","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"22:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"83","bestRating":"5"},"sameAs":["https://www.instagram.com/personal_studioparamulheres"]}
@@ -31,26 +35,26 @@
 
 <div style="background:#F8F4EF">
 
-<header style="position:fixed;top:0;left:0;right:0;zIndex:60;background:rgba(248,244,239,0.94);backdropFilter:blur(10px);borderBottom:1px solid rgba(87,27,40,0.12)">
-  <div style="maxWidth:1440px;margin:0 auto;padding:0 clamp(20px,6vw,90px);height:72px;display:flex;alignItems:center;justifyContent:space-between;gap:24px">
-    <a href="#topo" style="display:block;color:#571B28;lineHeight:1">
-      <div style="fontFamily:'Archivo Black',sans-serif;fontSize:17px;letterSpacing:0.02em">THAIS VALLE</div>
-      <div style="fontSize:9.5px;letterSpacing:0.24em;color:#BE005D;marginTop:4px">PERSONAL STUDIO PARA MULHERES</div>
+<header style="position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(248,244,239,0.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(87,27,40,0.12)">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,6vw,90px);height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href="#topo" style="display:block;color:#571B28;line-height:1">
+      <div style="font-family:'Archivo Black',sans-serif;font-size:17px;letter-spacing:0.02em">THAIS VALLE</div>
+      <div style="font-size:9.5px;letter-spacing:0.24em;color:#BE005D;margin-top:4px">PERSONAL STUDIO PARA MULHERES</div>
     </a>
     <sc-if value="{{ isWide }}" hint-placeholder-val="{{ true }}">
-      <nav style="display:flex;alignItems:center;gap:clamp(18px,2.4vw,34px)">
-        <a href="#studio" style="fontSize:14px;color:#571B28;letterSpacing:0.02em">O Studio</a>
-        <a href="#acompanhamento" style="fontSize:14px;color:#571B28;letterSpacing:0.02em">Acompanhamento</a>
-        <a href="#espaco" style="fontSize:14px;color:#571B28;letterSpacing:0.02em">Espaço</a>
-        <a href="#loja" style="fontSize:14px;color:#571B28;letterSpacing:0.02em">Loja</a>
-        <a href="#contato" style="fontSize:14px;color:#571B28;letterSpacing:0.02em">Contato</a>
-        <a href="https://wa.me/5547988482122?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Studio%20Thais%20Valle%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20para%20mulheres." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp" title="WhatsApp" style="display:flex;alignItems:center;justifyContent:center;width:40px;height:40px;borderRadius:999px;background:#571B28" style-hover="background:#BE005D">
+      <nav style="display:flex;align-items:center;gap:clamp(18px,2.4vw,34px)">
+        <a href="#studio" style="font-size:14px;color:#571B28;letter-spacing:0.02em">O Studio</a>
+        <a href="#acompanhamento" style="font-size:14px;color:#571B28;letter-spacing:0.02em">Acompanhamento</a>
+        <a href="#espaco" style="font-size:14px;color:#571B28;letter-spacing:0.02em">Espaço</a>
+        <a href="#loja" style="font-size:14px;color:#571B28;letter-spacing:0.02em">Loja</a>
+        <a href="#contato" style="font-size:14px;color:#571B28;letter-spacing:0.02em">Contato</a>
+        <a href="https://wa.me/5547988482122?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Studio%20Thais%20Valle%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20para%20mulheres." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp" title="WhatsApp" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;background:#571B28" style-hover="background:#BE005D">
           <img src="https://cdn.simpleicons.org/whatsapp/F8F4EF" alt="WhatsApp" width="19" height="19" />
         </a>
       </nav>
     </sc-if>
     <sc-if value="{{ isNarrow }}" hint-placeholder-val="{{ false }}">
-      <button type="button" onClick="{{ openMenu }}" aria-label="Abrir menu" style="display:flex;flexDirection:column;justifyContent:center;gap:5px;width:46px;height:46px;padding:0 11px;border:1px solid rgba(87,27,40,0.25);borderRadius:999px;background:transparent;cursor:pointer">
+      <button type="button" onClick="{{ openMenu }}" aria-label="Abrir menu" aria-controls="mobile-menu" aria-haspopup="dialog" style="display:flex;flex-direction:column;justify-content:center;gap:5px;width:46px;height:46px;padding:0 11px;border:1px solid rgba(87,27,40,0.25);border-radius:999px;background:transparent;cursor:pointer">
         <span style="display:block;height:1.5px;background:#571B28"></span>
         <span style="display:block;height:1.5px;background:#571B28"></span>
       </button>
@@ -59,48 +63,48 @@
 </header>
 
 <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-  <div style="position:fixed;inset:0;zIndex:90;background:#571B28;color:#F1E7D9;padding:24px;display:flex;flexDirection:column;animation:tvFade 300ms ease both">
-    <div style="display:flex;alignItems:center;justifyContent:space-between">
-      <div style="fontFamily:'Archivo Black',sans-serif;fontSize:17px">THAIS VALLE</div>
-      <button type="button" onClick="{{ closeMenu }}" aria-label="Fechar menu" style="width:46px;height:46px;borderRadius:999px;border:1px solid rgba(241,231,217,0.35);background:transparent;color:#F1E7D9;fontSize:20px;cursor:pointer">×</button>
+  <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu principal" style="position:fixed;inset:0;z-index:90;background:#571B28;color:#F1E7D9;padding:24px;display:flex;flex-direction:column;animation:tvFade 300ms ease both">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div style="font-family:'Archivo Black',sans-serif;font-size:17px">THAIS VALLE</div>
+      <button type="button" onClick="{{ closeMenuAndRestoreFocus }}" aria-label="Fechar menu" style="width:46px;height:46px;border-radius:999px;border:1px solid rgba(241,231,217,0.35);background:transparent;color:#F1E7D9;font-size:20px;cursor:pointer">×</button>
     </div>
-    <nav style="marginTop:48px;display:flex;flexDirection:column;gap:22px">
-      <a href="#studio" onClick="{{ closeMenu }}" style="fontFamily:'Archivo Black',sans-serif;fontSize:34px;color:#F1E7D9;letterSpacing:0.01em">O STUDIO</a>
-      <a href="#acompanhamento" onClick="{{ closeMenu }}" style="fontFamily:'Archivo Black',sans-serif;fontSize:34px;color:#F1E7D9">ACOMPANHAMENTO</a>
-      <a href="#espaco" onClick="{{ closeMenu }}" style="fontFamily:'Archivo Black',sans-serif;fontSize:34px;color:#F1E7D9">ESPAÇO</a>
-      <a href="#loja" onClick="{{ closeMenu }}" style="fontFamily:'Archivo Black',sans-serif;fontSize:34px;color:#F1E7D9">LOJA</a>
-      <a href="#contato" onClick="{{ closeMenu }}" style="fontFamily:'Archivo Black',sans-serif;fontSize:34px;color:#F1E7D9">CONTATO</a>
+    <nav style="margin-top:48px;display:flex;flex-direction:column;gap:22px">
+      <a href="#studio" onClick="{{ closeMenu }}" style="font-family:'Archivo Black',sans-serif;font-size:34px;color:#F1E7D9;letter-spacing:0.01em">O STUDIO</a>
+      <a href="#acompanhamento" onClick="{{ closeMenu }}" style="font-family:'Archivo Black',sans-serif;font-size:34px;color:#F1E7D9">ACOMPANHAMENTO</a>
+      <a href="#espaco" onClick="{{ closeMenu }}" style="font-family:'Archivo Black',sans-serif;font-size:34px;color:#F1E7D9">ESPAÇO</a>
+      <a href="#loja" onClick="{{ closeMenu }}" style="font-family:'Archivo Black',sans-serif;font-size:34px;color:#F1E7D9">LOJA</a>
+      <a href="#contato" onClick="{{ closeMenu }}" style="font-family:'Archivo Black',sans-serif;font-size:34px;color:#F1E7D9">CONTATO</a>
     </nav>
-    <div style="marginTop:auto;display:flex;alignItems:center;gap:14px;paddingTop:40px">
-      <a href="https://wa.me/5547988482122?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Studio%20Thais%20Valle%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20para%20mulheres." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp" style="display:flex;alignItems:center;justifyContent:center;width:52px;height:52px;borderRadius:999px;background:#BE005D">
+    <div style="margin-top:auto;display:flex;align-items:center;gap:14px;padding-top:40px">
+      <a href="https://wa.me/5547988482122?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Studio%20Thais%20Valle%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20para%20mulheres." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp" style="display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:999px;background:#BE005D">
         <img src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt="WhatsApp" width="24" height="24" />
       </a>
-      <a href="https://www.instagram.com/personal_studioparamulheres" target="_blank" rel="noopener" aria-label="Instagram do Studio" style="display:flex;alignItems:center;justifyContent:center;width:52px;height:52px;borderRadius:999px;border:1px solid rgba(241,231,217,0.4)">
+      <a href="https://www.instagram.com/personal_studioparamulheres" target="_blank" rel="noopener" aria-label="Instagram do Studio" style="display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:999px;border:1px solid rgba(241,231,217,0.4)">
         <img src="https://cdn.simpleicons.org/instagram/F1E7D9" alt="Instagram" width="24" height="24" />
       </a>
     </div>
   </div>
 </sc-if>
 
-<section id="topo" style="background:#F1E7D9;paddingTop:72px;overflow:hidden">
-  <div style="maxWidth:1440px;margin:0 auto;padding:clamp(36px,4.5vw,64px) clamp(20px,6vw,90px) clamp(48px,6vw,90px);display:flex;flexWrap:wrap;alignItems:stretch;gap:clamp(28px,4vw,56px)">
-    <div style="flex:1 1 520px;minWidth:0;display:flex;flexDirection:column;justifyContent:center">
-      <p style="fontSize:12px;letterSpacing:0.26em;color:#BE005D;marginBottom:clamp(20px,2.4vw,30px)">PERSONAL STUDIO FEMININO · RIO DO SUL, SC</p>
-      <h1 style="fontFamily:'Archivo Black',sans-serif;color:#571B28;fontSize:clamp(42px,5vw,82px);lineHeight:0.95;letterSpacing:-0.015em;textTransform:uppercase">Um espaço<br />pensado<br />para elas</h1>
-      <p style="marginTop:clamp(18px,2vw,26px);maxWidth:520px;fontFamily:'DM Serif Display',serif;fontStyle:italic;color:#BE005D;fontSize:clamp(22px,2.2vw,34px);lineHeight:1.2">para que você nunca seja apenas mais uma aluna</p>
-      <p style="marginTop:clamp(20px,2.2vw,30px);maxWidth:440px;fontSize:clamp(16px,1.15vw,18.5px);lineHeight:1.6;color:rgba(40,24,27,0.85)">Um studio só de mulheres no Centro de Rio do Sul, com treino acompanhado de perto, ambiente reservado e atenção individual do começo ao fim.</p>
-      <a href="https://wa.me/5547988482122?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Studio%20Thais%20Valle%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20para%20mulheres." target="_blank" rel="noopener" style="display:inline-flex;alignItems:center;alignSelf:flex-start;gap:12px;marginTop:clamp(26px,2.8vw,38px);height:54px;padding:0 30px;borderRadius:27px;background:#571B28;color:#F8F4EF;fontSize:16px;letterSpacing:0.02em;transition:background 320ms ease" style-hover="background:#BE005D;color:#FFFFFF">
+<section id="topo" style="background:#F1E7D9;padding-top:72px;overflow:hidden">
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(36px,4.5vw,64px) clamp(20px,6vw,90px) clamp(48px,6vw,90px);display:flex;flex-wrap:wrap;align-items:stretch;gap:clamp(28px,4vw,56px)">
+    <div style="flex:1 1 520px;min-width:0;display:flex;flex-direction:column;justify-content:center">
+      <p style="font-size:12px;letter-spacing:0.26em;color:#BE005D;margin-bottom:clamp(20px,2.4vw,30px)">PERSONAL STUDIO FEMININO · RIO DO SUL, SC</p>
+      <h1 style="font-family:'Archivo Black',sans-serif;color:#571B28;font-size:clamp(42px,5vw,82px);line-height:0.95;letter-spacing:-0.015em;text-transform:uppercase">Um espaço<br />pensado<br />para elas</h1>
+      <p style="margin-top:clamp(18px,2vw,26px);max-width:520px;font-family:'DM Serif Display',serif;font-style:italic;color:#BE005D;font-size:clamp(22px,2.2vw,34px);line-height:1.2">para que você nunca seja apenas mais uma aluna</p>
+      <p style="margin-top:clamp(20px,2.2vw,30px);max-width:440px;font-size:clamp(16px,1.15vw,18.5px);line-height:1.6;color:rgba(40,24,27,0.85)">Um studio só de mulheres no Centro de Rio do Sul, com treino acompanhado de perto, ambiente reservado e atenção individual do começo ao fim.</p>
+      <a href="https://wa.me/5547988482122?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Studio%20Thais%20Valle%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20para%20mulheres." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;align-self:flex-start;gap:12px;margin-top:clamp(26px,2.8vw,38px);height:54px;padding:0 30px;border-radius:27px;background:#571B28;color:#F8F4EF;font-size:16px;letter-spacing:0.02em;transition:background 320ms ease" style-hover="background:#BE005D;color:#FFFFFF">
         <img src="https://cdn.simpleicons.org/whatsapp/F8F4EF" alt="" width="19" height="19" />
         Conversar no WhatsApp
       </a>
     </div>
-    <div style="flex:1 1 320px;minWidth:0;maxWidth:480px">
-      <div style="position:relative;width:100%;height:100%;minHeight:min(74vh,620px);aspectRatio:4 / 5;overflow:hidden;background:#E9BCCB">
+    <div style="flex:1 1 320px;min-width:0;max-width:480px">
+      <div style="position:relative;width:100%;height:100%;min-height:min(74vh,620px);aspect-ratio:4 / 5;overflow:hidden;background:#E9BCCB">
         <sc-if value="{{ heroRetrato }}" hint-placeholder-val="{{ true }}">
-          <img src="uploads/73f2c951-2e00-4fc0-a7e1-735bbd7cd0c0.png" alt="Thais Valle, responsável pelo acompanhamento das alunas no studio" style="width:100%;height:100%;objectFit:cover;objectPosition:center 20%" />
+          <img src="uploads/SaveClip.App_779741236_1053931304026397_6951963599614525247_n.jpg" alt="Thais Valle, responsável pelo acompanhamento das alunas no studio" decoding="async" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;object-position:center top" />
         </sc-if>
         <sc-if value="{{ heroAmbiente }}" hint-placeholder-val="{{ false }}">
-          <img src="uploads/pasted-1789410543205-0.png" alt="Recepção do studio com a identidade Thais Valle Personal Studio para Mulheres na parede" style="width:100%;height:100%;objectFit:cover;objectPosition:center;transform:scale(1.04)" />
+          <img src="uploads/pasted-1789410543205-0.png" alt="Recepção do studio com a identidade Thais Valle Personal Studio para Mulheres na parede" decoding="async" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.04)" />
         </sc-if>
       </div>
     </div>
@@ -108,56 +112,56 @@
 </section>
 
 <section style="background:#571B28;color:#F1E7D9">
-  <div style="maxWidth:1440px;margin:0 auto;padding:clamp(40px,5vw,64px) clamp(20px,6vw,90px);display:flex;flexWrap:wrap;gap:clamp(28px,4vw,56px)">
-    <div style="flex:1 1 220px;minWidth:0;display:flex;alignItems:baseline;gap:16px">
-      <span style="fontFamily:'Archivo Black',sans-serif;fontSize:clamp(52px,6vw,84px);lineHeight:0.85;color:#E9BCCB">5,0</span>
-      <span style="fontSize:14px;lineHeight:1.5;letterSpacing:0.04em;maxWidth:140px">83 avaliações<br />no Google</span>
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(40px,5vw,64px) clamp(20px,6vw,90px);display:flex;flex-wrap:wrap;gap:clamp(28px,4vw,56px)">
+    <div style="flex:1 1 220px;min-width:0;display:flex;align-items:baseline;gap:16px">
+      <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(52px,6vw,84px);line-height:0.85;color:#E9BCCB">5,0</span>
+      <span style="font-size:14px;line-height:1.5;letter-spacing:0.04em;max-width:140px">83 avaliações<br />no Google</span>
     </div>
-    <div style="flex:1 1 240px;minWidth:0;borderLeft:1px solid rgba(241,231,217,0.22);paddingLeft:clamp(20px,3vw,40px);display:flex;alignItems:center">
-      <p style="fontFamily:'DM Serif Display',serif;fontSize:clamp(21px,2vw,28px);lineHeight:1.25">Espaço pensado para mulheres</p>
+    <div style="flex:1 1 240px;min-width:0;border-left:1px solid rgba(241,231,217,0.22);padding-left:clamp(20px,3vw,40px);display:flex;align-items:center">
+      <p style="font-family:'DM Serif Display',serif;font-size:clamp(21px,2vw,28px);line-height:1.25">Espaço pensado para mulheres</p>
     </div>
-    <div style="flex:1 1 240px;minWidth:0;borderLeft:1px solid rgba(241,231,217,0.22);paddingLeft:clamp(20px,3vw,40px);display:flex;flexDirection:column;justifyContent:center;gap:8px">
-      <p style="fontSize:16px;lineHeight:1.5">Segunda a sexta, das 06h às 22h</p>
-      <p style="fontSize:13px;letterSpacing:0.14em;color:#E9BCCB">ATENDIMENTO COM AGENDAMENTO</p>
+    <div style="flex:1 1 240px;min-width:0;border-left:1px solid rgba(241,231,217,0.22);padding-left:clamp(20px,3vw,40px);display:flex;flex-direction:column;justify-content:center;gap:8px">
+      <p style="font-size:16px;line-height:1.5">Segunda a sexta, das 06h às 22h</p>
+      <p style="font-size:13px;letter-spacing:0.14em;color:#E9BCCB">ATENDIMENTO COM AGENDAMENTO</p>
     </div>
   </div>
 </section>
 
 <section style="background:#F1D7DF;overflow:hidden">
-  <div style="maxWidth:1440px;margin:0 auto;padding:clamp(72px,9vw,140px) clamp(20px,6vw,90px)">
-    <p style="fontSize:12px;letterSpacing:0.26em;color:#BE005D">QUEM TREINA AQUI</p>
-    <blockquote style="margin:clamp(30px,4vw,54px) 0 0;maxWidth:1080px">
-      <p style="fontFamily:'Archivo Black',sans-serif;textTransform:uppercase;fontSize:clamp(30px,4.6vw,72px);lineHeight:1.02;color:#571B28;letterSpacing:-0.005em">O ambiente é super acolhedor, somente <span style="color:#BE005D">mulheres!</span></p>
-      <footer style="marginTop:clamp(18px,2vw,26px);fontSize:13px;letterSpacing:0.18em;color:#571B28">CRIS LEDRA · GOOGLE</footer>
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(72px,9vw,140px) clamp(20px,6vw,90px)">
+    <p style="font-size:12px;letter-spacing:0.26em;color:#BE005D">QUEM TREINA AQUI</p>
+    <blockquote style="margin:clamp(30px,4vw,54px) 0 0;max-width:1080px">
+      <p style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(30px,4.6vw,72px);line-height:1.02;color:#571B28;letter-spacing:-0.005em">O ambiente é super acolhedor, somente <span style="color:#BE005D">mulheres!</span></p>
+      <footer style="margin-top:clamp(18px,2vw,26px);font-size:13px;letter-spacing:0.18em;color:#571B28">CRIS LEDRA · GOOGLE</footer>
     </blockquote>
-    <div style="marginTop:clamp(54px,7vw,96px);display:flex;flexWrap:wrap;gap:clamp(32px,4vw,64px);borderTop:1px solid rgba(87,27,40,0.2);paddingTop:clamp(36px,4vw,56px)">
-      <blockquote style="flex:1 1 400px;minWidth:0;margin:0">
-        <p style="fontSize:clamp(19px,1.7vw,25px);lineHeight:1.5;color:#28181B">“Studio Thais Valle fez todo diferença em meus treinos, Thaís é uma super profissional, competente e atenciosa aos mínimos detalhes, dando total atenção aos alunos.”</p>
-        <footer style="marginTop:22px;fontSize:12.5px;letterSpacing:0.18em;color:#571B28">CRIS LEDRA</footer>
+    <div style="margin-top:clamp(54px,7vw,96px);display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px);border-top:1px solid rgba(87,27,40,0.2);padding-top:clamp(36px,4vw,56px)">
+      <blockquote style="flex:1 1 400px;min-width:0;margin:0">
+        <p style="font-size:clamp(19px,1.7vw,25px);line-height:1.5;color:#28181B">“Studio Thais Valle fez todo diferença em meus treinos, Thaís é uma super profissional, competente e atenciosa aos mínimos detalhes, dando total atenção aos alunos.”</p>
+        <footer style="margin-top:22px;font-size:12.5px;letter-spacing:0.18em;color:#571B28">CRIS LEDRA</footer>
       </blockquote>
-      <blockquote style="flex:1 1 340px;minWidth:0;margin:0">
-        <p style="fontSize:clamp(19px,1.7vw,25px);lineHeight:1.5;color:#28181B">“Espaço maravilho, confortável e com privacidade para as mulheres treinarem. As personais são incríveis!”</p>
-        <footer style="marginTop:22px;fontSize:12.5px;letterSpacing:0.18em;color:#571B28">MARILI DAIANA ROSA FERREIRA</footer>
+      <blockquote style="flex:1 1 340px;min-width:0;margin:0">
+        <p style="font-size:clamp(19px,1.7vw,25px);line-height:1.5;color:#28181B">“Espaço maravilho, confortável e com privacidade para as mulheres treinarem. As personais são incríveis!”</p>
+        <footer style="margin-top:22px;font-size:12.5px;letter-spacing:0.18em;color:#571B28">MARILI DAIANA ROSA FERREIRA</footer>
       </blockquote>
     </div>
   </div>
 </section>
 
 <section id="studio" style="background:#F1E7D9;overflow:hidden">
-  <div style="maxWidth:1440px;margin:0 auto;padding:clamp(72px,9vw,150px) clamp(20px,6vw,90px)">
-    <div style="display:flex;flexWrap:wrap;gap:clamp(36px,5vw,80px);alignItems:flex-start">
-      <div style="flex:1 1 380px;minWidth:0;maxWidth:560px">
-        <div style="width:100%;aspectRatio:4 / 5;overflow:hidden;borderRadius:2px;background:#E9BCCB">
-          <img src="uploads/pasted-1789410543205-0.png" alt="Sala de espera do studio com a identidade Thais Valle na parede" style="width:100%;height:100%;objectFit:cover;objectPosition:center 40%;transform:scale(1.04)" />
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(72px,9vw,150px) clamp(20px,6vw,90px)">
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(36px,5vw,80px);align-items:flex-start">
+      <div style="flex:1 1 380px;min-width:0;max-width:560px">
+        <div style="width:100%;aspect-ratio:4 / 5;overflow:hidden;border-radius:2px;background:#E9BCCB">
+          <img src="uploads/pasted-1789410543205-0.png" alt="Sala de espera do studio com a identidade Thais Valle na parede" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;transform:scale(1.04)" />
         </div>
       </div>
-      <div style="flex:1 1 420px;minWidth:0;paddingTop:clamp(0px,3vw,48px)">
-        <p style="fontSize:12px;letterSpacing:0.26em;color:#BE005D">O STUDIO</p>
-        <h2 style="marginTop:clamp(20px,2.4vw,32px);fontFamily:'Archivo Black',sans-serif;textTransform:uppercase;fontSize:clamp(36px,4.6vw,78px);lineHeight:0.98;color:#571B28">Aqui você<br />treina<br /><span style="fontFamily:'DM Serif Display',serif;fontStyle:italic;fontWeight:400;textTransform:none;color:#BE005D">acompanhada</span></h2>
-        <p style="marginTop:clamp(24px,3vw,36px);maxWidth:460px;fontSize:clamp(17px,1.3vw,20px);lineHeight:1.6">O studio nasceu da ideia de um lugar onde a mulher entra e sabe que alguém está de olho no treino dela. Thais Valle e a equipe conduzem os atendimentos de perto, ajustando o que precisa ser ajustado no dia.</p>
-        <p style="marginTop:22px;maxWidth:460px;fontSize:clamp(16px,1.2vw,18px);lineHeight:1.65;color:rgba(40,24,27,0.82)">O espaço é só de mulheres, organizado e reservado, com equipamentos à disposição e horários que cabem na rotina. Sem plateia, sem pressa e sem aquela sensação de estar perdida no meio da academia.</p>
-        <div style="marginTop:clamp(30px,3vw,44px);display:flex;flexWrap:wrap;gap:12px">
-          <a href="#acompanhamento" style="display:inline-flex;alignItems:center;height:52px;padding:0 28px;borderRadius:26px;border:1px solid #571B28;color:#571B28;fontSize:15px;transition:all 320ms ease" style-hover="background:#571B28;color:#F1E7D9">Como é o acompanhamento</a>
+      <div style="flex:1 1 420px;min-width:0;padding-top:clamp(0px,3vw,48px)">
+        <p style="font-size:12px;letter-spacing:0.26em;color:#BE005D">O STUDIO</p>
+        <h2 style="margin-top:clamp(20px,2.4vw,32px);font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(36px,4.6vw,78px);line-height:0.98;color:#571B28">Aqui você<br />treina<br /><span style="font-family:'DM Serif Display',serif;font-style:italic;font-weight:400;text-transform:none;color:#BE005D">acompanhada</span></h2>
+        <p style="margin-top:clamp(24px,3vw,36px);max-width:460px;font-size:clamp(17px,1.3vw,20px);line-height:1.6">O studio nasceu da ideia de um lugar onde a mulher entra e sabe que alguém está de olho no treino dela. Thais Valle e a equipe conduzem os atendimentos de perto, ajustando o que precisa ser ajustado no dia.</p>
+        <p style="margin-top:22px;max-width:460px;font-size:clamp(16px,1.2vw,18px);line-height:1.65;color:rgba(40,24,27,0.82)">O espaço é só de mulheres, organizado e reservado, com equipamentos à disposição e horários que cabem na rotina. Sem plateia, sem pressa e sem aquela sensação de estar perdida no meio da academia.</p>
+        <div style="margin-top:clamp(30px,3vw,44px);display:flex;flex-wrap:wrap;gap:12px">
+          <a href="#acompanhamento" style="display:inline-flex;align-items:center;height:52px;padding:0 28px;border-radius:26px;border:1px solid #571B28;color:#571B28;font-size:15px;transition:all 320ms ease" style-hover="background:#571B28;color:#F1E7D9">Como é o acompanhamento</a>
         </div>
       </div>
     </div>
@@ -165,31 +169,31 @@
 </section>
 
 <section id="acompanhamento" style="background:#571B28;color:#F1E7D9;overflow:hidden">
-  <div style="maxWidth:1440px;margin:0 auto;padding:clamp(72px,9vw,150px) clamp(20px,6vw,90px)">
-    <div style="display:flex;flexWrap:wrap;gap:clamp(36px,5vw,72px);alignItems:flex-end">
-      <h2 style="flex:1 1 520px;minWidth:0;fontFamily:'Archivo Black',sans-serif;textTransform:uppercase;fontSize:clamp(36px,5.4vw,90px);lineHeight:0.96">Treino<br />ajustado<br />ao seu <span style="fontFamily:'DM Serif Display',serif;fontStyle:italic;fontWeight:400;textTransform:none;color:#E9BCCB">corpo</span></h2>
-      <p style="flex:1 1 300px;minWidth:0;maxWidth:420px;fontSize:clamp(17px,1.3vw,20px);lineHeight:1.6;color:rgba(241,231,217,0.88)">Cada aluna tem um ponto de partida diferente. O treino é montado a partir disso e vai mudando conforme a sua rotina e o que o seu corpo pede.</p>
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(72px,9vw,150px) clamp(20px,6vw,90px)">
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(36px,5vw,72px);align-items:flex-end">
+      <h2 style="flex:1 1 520px;min-width:0;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(36px,5.4vw,90px);line-height:0.96">Treino<br />ajustado<br />ao seu <span style="font-family:'DM Serif Display',serif;font-style:italic;font-weight:400;text-transform:none;color:#E9BCCB">corpo</span></h2>
+      <p style="flex:1 1 300px;min-width:0;max-width:420px;font-size:clamp(17px,1.3vw,20px);line-height:1.6;color:rgba(241,231,217,0.88)">Cada aluna tem um ponto de partida diferente. O treino é montado a partir disso e vai mudando conforme a sua rotina e o que o seu corpo pede.</p>
     </div>
-    <div style="marginTop:clamp(48px,6vw,88px);display:flex;flexWrap:wrap;gap:clamp(32px,4vw,64px);alignItems:stretch">
-      <div style="flex:1 1 360px;minWidth:0;maxWidth:520px">
-        <div style="width:100%;aspectRatio:3 / 4;overflow:hidden;background:#3E141B">
-          <img src="uploads/pasted-1789410640951-0.png" alt="Professora preenchendo a ficha de treino de uma aluna" style="width:100%;height:100%;objectFit:cover;objectPosition:center;transform:scale(1.04)" />
+    <div style="margin-top:clamp(48px,6vw,88px);display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px);align-items:stretch">
+      <div style="flex:1 1 360px;min-width:0;max-width:520px">
+        <div style="width:100%;aspect-ratio:3 / 4;overflow:hidden;background:#3E141B">
+          <img src="uploads/pasted-1789410640951-0.png" alt="Professora preenchendo a ficha de treino de uma aluna" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.04)" />
         </div>
       </div>
-      <div style="flex:1 1 380px;minWidth:0;display:flex;flexDirection:column;justifyContent:center">
-        <div style="borderTop:1px solid rgba(241,231,217,0.22);padding:clamp(24px,2.6vw,34px) 0">
-          <h3 style="fontSize:clamp(22px,2vw,30px);fontFamily:'DM Serif Display',serif;color:#F1E7D9">Professora por perto</h3>
-          <p style="marginTop:12px;fontSize:16.5px;lineHeight:1.6;color:rgba(241,231,217,0.82);maxWidth:420px">A correção acontece durante o treino, não depois. Você sempre tem alguém para perguntar.</p>
+      <div style="flex:1 1 380px;min-width:0;display:flex;flex-direction:column;justify-content:center">
+        <div style="border-top:1px solid rgba(241,231,217,0.22);padding:clamp(24px,2.6vw,34px) 0">
+          <h3 style="font-size:clamp(22px,2vw,30px);font-family:'DM Serif Display',serif;color:#F1E7D9">Professora por perto</h3>
+          <p style="margin-top:12px;font-size:16.5px;line-height:1.6;color:rgba(241,231,217,0.82);max-width:420px">A correção acontece durante o treino, não depois. Você sempre tem alguém para perguntar.</p>
         </div>
-        <div style="borderTop:1px solid rgba(241,231,217,0.22);padding:clamp(24px,2.6vw,34px) 0">
-          <h3 style="fontSize:clamp(22px,2vw,30px);fontFamily:'DM Serif Display',serif;color:#F1E7D9">Treino que muda com você</h3>
-          <p style="marginTop:12px;fontSize:16.5px;lineHeight:1.6;color:rgba(241,231,217,0.82);maxWidth:420px">Os treinos são trocados com regularidade, com foco no que cada aluna precisa naquele momento.</p>
+        <div style="border-top:1px solid rgba(241,231,217,0.22);padding:clamp(24px,2.6vw,34px) 0">
+          <h3 style="font-size:clamp(22px,2vw,30px);font-family:'DM Serif Display',serif;color:#F1E7D9">Treino que muda com você</h3>
+          <p style="margin-top:12px;font-size:16.5px;line-height:1.6;color:rgba(241,231,217,0.82);max-width:420px">Os treinos são trocados com regularidade, com foco no que cada aluna precisa naquele momento.</p>
         </div>
-        <div style="borderTop:1px solid rgba(241,231,217,0.22);borderBottom:1px solid rgba(241,231,217,0.22);padding:clamp(24px,2.6vw,34px) 0">
-          <h3 style="fontSize:clamp(22px,2vw,30px);fontFamily:'DM Serif Display',serif;color:#F1E7D9">Ambiente reservado</h3>
-          <p style="marginTop:12px;fontSize:16.5px;lineHeight:1.6;color:rgba(241,231,217,0.82);maxWidth:420px">Só mulheres treinando, com privacidade e conforto para fazer o seu treino no seu ritmo.</p>
+        <div style="border-top:1px solid rgba(241,231,217,0.22);border-bottom:1px solid rgba(241,231,217,0.22);padding:clamp(24px,2.6vw,34px) 0">
+          <h3 style="font-size:clamp(22px,2vw,30px);font-family:'DM Serif Display',serif;color:#F1E7D9">Ambiente reservado</h3>
+          <p style="margin-top:12px;font-size:16.5px;line-height:1.6;color:rgba(241,231,217,0.82);max-width:420px">Só mulheres treinando, com privacidade e conforto para fazer o seu treino no seu ritmo.</p>
         </div>
-        <a href="https://wa.me/5547988482122?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Studio%20Thais%20Valle%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20para%20mulheres." target="_blank" rel="noopener" style="display:inline-flex;alignItems:center;gap:12px;alignSelf:flex-start;marginTop:clamp(28px,3vw,40px);height:54px;padding:0 30px;borderRadius:27px;background:#BE005D;color:#FFFFFF;fontSize:16px;transition:background 320ms ease" style-hover="background:#F1E7D9;color:#571B28">
+        <a href="https://wa.me/5547988482122?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Studio%20Thais%20Valle%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20para%20mulheres." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;align-self:flex-start;margin-top:clamp(28px,3vw,40px);height:54px;padding:0 30px;border-radius:27px;background:#BE005D;color:#FFFFFF;font-size:16px;transition:background 320ms ease" style-hover="background:#F1E7D9;color:#571B28">
           <img src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt="" width="19" height="19" />
           Falar com a equipe
         </a>
@@ -199,55 +203,55 @@
 </section>
 
 <section id="espaco" style="background:#F8F4EF;overflow:hidden">
-  <div style="maxWidth:1440px;margin:0 auto;padding:clamp(72px,9vw,150px) clamp(20px,6vw,90px)">
-    <div style="display:flex;flexWrap:wrap;gap:24px;alignItems:flex-end;justifyContent:space-between">
-      <h2 style="fontFamily:'Archivo Black',sans-serif;textTransform:uppercase;fontSize:clamp(34px,4.6vw,76px);lineHeight:0.98;color:#571B28">O espaço<br />por dentro</h2>
-      <p style="fontSize:12px;letterSpacing:0.26em;color:#BE005D;paddingBottom:10px">RUA DOM BOSCO, 107 · CENTRO</p>
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(72px,9vw,150px) clamp(20px,6vw,90px)">
+    <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between">
+      <h2 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(34px,4.6vw,76px);line-height:0.98;color:#571B28">O espaço<br />por dentro</h2>
+      <p style="font-size:12px;letter-spacing:0.26em;color:#BE005D;padding-bottom:10px">RUA DOM BOSCO, 107 · CENTRO</p>
     </div>
-    <div style="marginTop:clamp(40px,5vw,72px);display:flex;flexWrap:wrap;gap:clamp(16px,2vw,28px)">
-      <div style="flex:2 1 440px;minWidth:0">
-        <div style="width:100%;aspectRatio:3 / 4;overflow:hidden;background:#E9BCCB">
-          <img src="uploads/pasted-1789410504153-0.png" alt="Equipamentos de musculação do studio junto às janelas" style="width:100%;height:100%;objectFit:cover;objectPosition:center;transform:scale(1.04);transition:transform 500ms ease" style-hover="transform:scale(1.08)" />
+    <div style="margin-top:clamp(40px,5vw,72px);display:flex;flex-wrap:wrap;gap:clamp(16px,2vw,28px)">
+      <div style="flex:2 1 440px;min-width:0">
+        <div style="width:100%;aspect-ratio:3 / 4;overflow:hidden;background:#E9BCCB">
+          <img src="uploads/pasted-1789410504153-0.png" alt="Equipamentos de musculação do studio junto às janelas" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.04);transition:transform 500ms ease" style-hover="transform:scale(1.08)" />
         </div>
       </div>
-      <div style="flex:1 1 300px;minWidth:0;display:flex;flexDirection:column;gap:clamp(16px,2vw,28px);justifyContent:flex-end">
-        <p style="fontFamily:'DM Serif Display',serif;fontSize:clamp(22px,2.1vw,30px);lineHeight:1.3;color:#571B28;maxWidth:330px">Organização, equipamentos e lugar para respirar entre uma série e outra.</p>
-        <div style="width:100%;aspectRatio:1 / 1;overflow:hidden;background:#E9BCCB">
-          <img src="uploads/pasted-1789410656573-0.png" alt="Área de esteira, bicicletas e elíptico do studio" style="width:100%;height:100%;objectFit:cover;objectPosition:center;transform:scale(1.04);transition:transform 500ms ease" style-hover="transform:scale(1.08)" />
+      <div style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:clamp(16px,2vw,28px);justify-content:flex-end">
+        <p style="font-family:'DM Serif Display',serif;font-size:clamp(22px,2.1vw,30px);line-height:1.3;color:#571B28;max-width:330px">Organização, equipamentos e lugar para respirar entre uma série e outra.</p>
+        <div style="width:100%;aspect-ratio:1 / 1;overflow:hidden;background:#E9BCCB">
+          <img src="uploads/pasted-1789410656573-0.png" alt="Área de esteira, bicicletas e elíptico do studio" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.04);transition:transform 500ms ease" style-hover="transform:scale(1.08)" />
         </div>
       </div>
     </div>
-    <div style="marginTop:clamp(16px,2vw,28px);display:flex;flexWrap:wrap;gap:clamp(16px,2vw,28px)">
-      <div style="flex:1 1 300px;minWidth:0">
-        <div style="width:100%;aspectRatio:3 / 4;overflow:hidden;background:#E9BCCB">
-          <img src="uploads/pasted-1789410599282-0.png" alt="Halteres organizados no suporte ao lado dos bancos de treino" style="width:100%;height:100%;objectFit:cover;objectPosition:center;transform:scale(1.04);transition:transform 500ms ease" style-hover="transform:scale(1.08)" />
+    <div style="margin-top:clamp(16px,2vw,28px);display:flex;flex-wrap:wrap;gap:clamp(16px,2vw,28px)">
+      <div style="flex:1 1 300px;min-width:0">
+        <div style="width:100%;aspect-ratio:3 / 4;overflow:hidden;background:#E9BCCB">
+          <img src="uploads/pasted-1789410599282-0.png" alt="Halteres organizados no suporte ao lado dos bancos de treino" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.04);transition:transform 500ms ease" style-hover="transform:scale(1.08)" />
         </div>
       </div>
-      <div style="flex:1 1 300px;minWidth:0">
-        <div style="width:100%;aspectRatio:3 / 4;overflow:hidden;background:#E9BCCB">
-          <img src="uploads/pasted-1789410613613-0.png" alt="Barra fixa, bolas e acessórios na área funcional do studio" style="width:100%;height:100%;objectFit:cover;objectPosition:center;transform:scale(1.04);transition:transform 500ms ease" style-hover="transform:scale(1.08)" />
+      <div style="flex:1 1 300px;min-width:0">
+        <div style="width:100%;aspect-ratio:3 / 4;overflow:hidden;background:#E9BCCB">
+          <img src="uploads/pasted-1789410613613-0.png" alt="Barra fixa, bolas e acessórios na área funcional do studio" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.04);transition:transform 500ms ease" style-hover="transform:scale(1.08)" />
         </div>
       </div>
-      <div style="flex:1 1 200px;minWidth:0;display:flex;alignItems:flex-end;paddingBottom:8px">
-        <p style="fontSize:16px;lineHeight:1.65;color:rgba(40,24,27,0.8);maxWidth:280px">Musculação, funcional e cardio no mesmo lugar, sempre com professora acompanhando.</p>
+      <div style="flex:1 1 200px;min-width:0;display:flex;align-items:flex-end;padding-bottom:8px">
+        <p style="font-size:16px;line-height:1.65;color:rgba(40,24,27,0.8);max-width:280px">Musculação, funcional e cardio no mesmo lugar, sempre com professora acompanhando.</p>
       </div>
     </div>
   </div>
 </section>
 
 <section id="loja" style="background:#E9BCCB;overflow:hidden">
-  <div style="maxWidth:1440px;margin:0 auto;padding:clamp(72px,9vw,150px) clamp(20px,6vw,90px);display:flex;flexWrap:wrap;gap:clamp(36px,5vw,80px);alignItems:center">
-    <div style="flex:1 1 320px;minWidth:0;maxWidth:460px;order:2">
-      <div style="width:100%;aspectRatio:4 / 5;overflow:hidden;background:#F1D7DF">
-        <img src="uploads/SaveClip.App_671144394_18084804590360595_902269026673560302_n.jpg" alt="Peça de roupa fitness feminina da Move On Fitness Clothing" style="width:100%;height:100%;objectFit:cover;objectPosition:center 30%" />
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(72px,9vw,150px) clamp(20px,6vw,90px);display:flex;flex-wrap:wrap;gap:clamp(36px,5vw,80px);align-items:center">
+    <div style="flex:1 1 320px;min-width:0;max-width:460px;order:2">
+      <div style="width:100%;aspect-ratio:4 / 5;overflow:hidden;background:#F1D7DF">
+        <img src="uploads/SaveClip.App_671144394_18084804590360595_902269026673560302_n.jpg" alt="Peça de roupa fitness feminina da Move On Fitness Clothing" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center 30%" />
       </div>
     </div>
-    <div style="flex:1 1 420px;minWidth:0;order:1">
-      <p style="fontSize:12px;letterSpacing:0.26em;color:#571B28">MOVE ON FITNESS CLOTHING</p>
-      <h2 style="marginTop:clamp(20px,2.4vw,32px);fontFamily:'Archivo Black',sans-serif;textTransform:uppercase;fontSize:clamp(36px,5vw,84px);lineHeight:0.96;color:#571B28">Venha<br />conhecer<br />a nossa <span style="fontFamily:'DM Serif Display',serif;fontStyle:italic;fontWeight:400;textTransform:none;color:#BE005D">loja</span></h2>
-      <p style="marginTop:clamp(24px,3vw,36px);maxWidth:420px;fontSize:clamp(17px,1.3vw,20px);lineHeight:1.6;color:#28181B">Uma loja de roupa fitness para elas, anexa ao studio. Passe para ver as novidades quando vier treinar.</p>
-      <p style="marginTop:20px;maxWidth:420px;fontSize:14.5px;lineHeight:1.7;color:rgba(40,24,27,0.75)">Centro Empresarial Ilha da Creta, Rua Dom Bosco, 711, sala comercial 101, Rio do Sul.</p>
-      <a href="https://www.instagram.com/moveon_fitnessclothing" target="_blank" rel="noopener" aria-label="Instagram da Move On Fitness Clothing" title="Instagram da loja" style="display:inline-flex;alignItems:center;justifyContent:center;marginTop:clamp(28px,3vw,40px);width:56px;height:56px;borderRadius:999px;border:1px solid #571B28;transition:background 320ms ease" style-hover="background:#571B28">
+    <div style="flex:1 1 420px;min-width:0;order:1">
+      <p style="font-size:12px;letter-spacing:0.26em;color:#571B28">MOVE ON FITNESS CLOTHING</p>
+      <h2 style="margin-top:clamp(20px,2.4vw,32px);font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(36px,5vw,84px);line-height:0.96;color:#571B28">Venha<br />conhecer<br />a nossa <span style="font-family:'DM Serif Display',serif;font-style:italic;font-weight:400;text-transform:none;color:#BE005D">loja</span></h2>
+      <p style="margin-top:clamp(24px,3vw,36px);max-width:420px;font-size:clamp(17px,1.3vw,20px);line-height:1.6;color:#28181B">Uma loja de roupa fitness para elas, anexa ao studio. Passe para ver as novidades quando vier treinar.</p>
+      <p style="margin-top:20px;max-width:420px;font-size:14.5px;line-height:1.7;color:rgba(40,24,27,0.75)">Centro Empresarial Ilha da Creta, Rua Dom Bosco, 711, sala comercial 101, Rio do Sul.</p>
+      <a href="https://www.instagram.com/moveon_fitnessclothing" target="_blank" rel="noopener" aria-label="Instagram da Move On Fitness Clothing" title="Instagram da loja" style="display:inline-flex;align-items:center;justify-content:center;margin-top:clamp(28px,3vw,40px);width:56px;height:56px;border-radius:999px;border:1px solid #571B28;transition:background 320ms ease" style-hover="background:#571B28">
         <img src="https://cdn.simpleicons.org/instagram/571B28" alt="Instagram" width="24" height="24" />
       </a>
     </div>
@@ -255,67 +259,67 @@
 </section>
 
 <section style="background:#F8F4EF;overflow:hidden">
-  <div style="maxWidth:1440px;margin:0 auto;padding:clamp(72px,9vw,150px) clamp(20px,6vw,90px)">
-    <h2 style="fontFamily:'Archivo Black',sans-serif;textTransform:uppercase;fontSize:clamp(34px,4.6vw,76px);lineHeight:0.98;color:#571B28;maxWidth:900px">Como começar</h2>
-    <div style="marginTop:clamp(40px,5vw,72px)">
-      <div style="borderTop:1px solid rgba(87,27,40,0.2);display:flex;flexWrap:wrap;gap:clamp(16px,3vw,56px);padding:clamp(26px,3vw,40px) 0">
-        <span style="flex:0 0 auto;fontFamily:'Archivo Black',sans-serif;fontSize:clamp(38px,4vw,64px);lineHeight:0.9;color:#E9BCCB">01</span>
-        <div style="flex:1 1 280px;minWidth:0">
-          <h3 style="fontSize:clamp(22px,2vw,30px);color:#571B28;fontFamily:'DM Serif Display',serif">Conheça a proposta</h3>
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(72px,9vw,150px) clamp(20px,6vw,90px)">
+    <h2 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(34px,4.6vw,76px);line-height:0.98;color:#571B28;max-width:900px">Como começar</h2>
+    <div style="margin-top:clamp(40px,5vw,72px)">
+      <div style="border-top:1px solid rgba(87,27,40,0.2);display:flex;flex-wrap:wrap;gap:clamp(16px,3vw,56px);padding:clamp(26px,3vw,40px) 0">
+        <span style="flex:0 0 auto;font-family:'Archivo Black',sans-serif;font-size:clamp(38px,4vw,64px);line-height:0.9;color:#E9BCCB">01</span>
+        <div style="flex:1 1 280px;min-width:0">
+          <h3 style="font-size:clamp(22px,2vw,30px);color:#571B28;font-family:'DM Serif Display',serif">Conheça a proposta</h3>
         </div>
-        <p style="flex:1 1 320px;minWidth:0;maxWidth:460px;fontSize:16.5px;lineHeight:1.65;color:rgba(40,24,27,0.82)">Veja aqui como funciona o studio, o ambiente e a forma de acompanhamento antes de qualquer contato.</p>
+        <p style="flex:1 1 320px;min-width:0;max-width:460px;font-size:16.5px;line-height:1.65;color:rgba(40,24,27,0.82)">Veja aqui como funciona o studio, o ambiente e a forma de acompanhamento antes de qualquer contato.</p>
       </div>
-      <div style="borderTop:1px solid rgba(87,27,40,0.2);display:flex;flexWrap:wrap;gap:clamp(16px,3vw,56px);padding:clamp(26px,3vw,40px) 0">
-        <span style="flex:0 0 auto;fontFamily:'Archivo Black',sans-serif;fontSize:clamp(38px,4vw,64px);lineHeight:0.9;color:#E9BCCB">02</span>
-        <div style="flex:1 1 280px;minWidth:0">
-          <h3 style="fontSize:clamp(22px,2vw,30px);color:#571B28;fontFamily:'DM Serif Display',serif">Chame no WhatsApp</h3>
+      <div style="border-top:1px solid rgba(87,27,40,0.2);display:flex;flex-wrap:wrap;gap:clamp(16px,3vw,56px);padding:clamp(26px,3vw,40px) 0">
+        <span style="flex:0 0 auto;font-family:'Archivo Black',sans-serif;font-size:clamp(38px,4vw,64px);line-height:0.9;color:#E9BCCB">02</span>
+        <div style="flex:1 1 280px;min-width:0">
+          <h3 style="font-size:clamp(22px,2vw,30px);color:#571B28;font-family:'DM Serif Display',serif">Chame no WhatsApp</h3>
         </div>
-        <p style="flex:1 1 320px;minWidth:0;maxWidth:460px;fontSize:16.5px;lineHeight:1.65;color:rgba(40,24,27,0.82)">Fale direto com a equipe e conte o que você procura no treino e quais horários funcionam para você.</p>
+        <p style="flex:1 1 320px;min-width:0;max-width:460px;font-size:16.5px;line-height:1.65;color:rgba(40,24,27,0.82)">Fale direto com a equipe e conte o que você procura no treino e quais horários funcionam para você.</p>
       </div>
-      <div style="borderTop:1px solid rgba(87,27,40,0.2);display:flex;flexWrap:wrap;gap:clamp(16px,3vw,56px);padding:clamp(26px,3vw,40px) 0">
-        <span style="flex:0 0 auto;fontFamily:'Archivo Black',sans-serif;fontSize:clamp(38px,4vw,64px);lineHeight:0.9;color:#E9BCCB">03</span>
-        <div style="flex:1 1 280px;minWidth:0">
-          <h3 style="fontSize:clamp(22px,2vw,30px);color:#571B28;fontFamily:'DM Serif Display',serif">Combine o agendamento</h3>
+      <div style="border-top:1px solid rgba(87,27,40,0.2);display:flex;flex-wrap:wrap;gap:clamp(16px,3vw,56px);padding:clamp(26px,3vw,40px) 0">
+        <span style="flex:0 0 auto;font-family:'Archivo Black',sans-serif;font-size:clamp(38px,4vw,64px);line-height:0.9;color:#E9BCCB">03</span>
+        <div style="flex:1 1 280px;min-width:0">
+          <h3 style="font-size:clamp(22px,2vw,30px);color:#571B28;font-family:'DM Serif Display',serif">Combine o agendamento</h3>
         </div>
-        <p style="flex:1 1 320px;minWidth:0;maxWidth:460px;fontSize:16.5px;lineHeight:1.65;color:rgba(40,24,27,0.82)">O atendimento é presencial e com agendamento. Vocês definem juntas o dia e o horário da sua visita.</p>
+        <p style="flex:1 1 320px;min-width:0;max-width:460px;font-size:16.5px;line-height:1.65;color:rgba(40,24,27,0.82)">O atendimento é presencial e com agendamento. Vocês definem juntas o dia e o horário da sua visita.</p>
       </div>
-      <div style="borderTop:1px solid rgba(87,27,40,0.2);borderBottom:1px solid rgba(87,27,40,0.2);display:flex;flexWrap:wrap;gap:clamp(16px,3vw,56px);padding:clamp(26px,3vw,40px) 0">
-        <span style="flex:0 0 auto;fontFamily:'Archivo Black',sans-serif;fontSize:clamp(38px,4vw,64px);lineHeight:0.9;color:#E9BCCB">04</span>
-        <div style="flex:1 1 280px;minWidth:0">
-          <h3 style="fontSize:clamp(22px,2vw,30px);color:#571B28;fontFamily:'DM Serif Display',serif">Receba as orientações</h3>
+      <div style="border-top:1px solid rgba(87,27,40,0.2);border-bottom:1px solid rgba(87,27,40,0.2);display:flex;flex-wrap:wrap;gap:clamp(16px,3vw,56px);padding:clamp(26px,3vw,40px) 0">
+        <span style="flex:0 0 auto;font-family:'Archivo Black',sans-serif;font-size:clamp(38px,4vw,64px);line-height:0.9;color:#E9BCCB">04</span>
+        <div style="flex:1 1 280px;min-width:0">
+          <h3 style="font-size:clamp(22px,2vw,30px);color:#571B28;font-family:'DM Serif Display',serif">Receba as orientações</h3>
         </div>
-        <p style="flex:1 1 320px;minWidth:0;maxWidth:460px;fontSize:16.5px;lineHeight:1.65;color:rgba(40,24,27,0.82)">A equipe passa tudo o que você precisa saber para começar a treinar com tranquilidade.</p>
+        <p style="flex:1 1 320px;min-width:0;max-width:460px;font-size:16.5px;line-height:1.65;color:rgba(40,24,27,0.82)">A equipe passa tudo o que você precisa saber para começar a treinar com tranquilidade.</p>
       </div>
     </div>
   </div>
 </section>
 
 <section id="contato" style="background:#F1E7D9;overflow:hidden">
-  <div style="maxWidth:1440px;margin:0 auto;padding:clamp(72px,9vw,150px) clamp(20px,6vw,90px);display:flex;flexWrap:wrap;gap:clamp(36px,5vw,80px)">
-    <div style="flex:1 1 420px;minWidth:0">
-      <h2 style="fontFamily:'Archivo Black',sans-serif;textTransform:uppercase;fontSize:clamp(36px,4.8vw,80px);lineHeight:0.98;color:#571B28">Onde<br />a gente<br />treina</h2>
-      <div style="marginTop:clamp(30px,3.4vw,48px);maxWidth:400px">
-        <p style="fontSize:12px;letterSpacing:0.24em;color:#BE005D">ENDEREÇO</p>
-        <p style="marginTop:12px;fontSize:clamp(18px,1.4vw,22px);lineHeight:1.5;color:#28181B">Rua Dom Bosco, 107<br />Centro, Rio do Sul, SC<br />89160-210</p>
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(72px,9vw,150px) clamp(20px,6vw,90px);display:flex;flex-wrap:wrap;gap:clamp(36px,5vw,80px)">
+    <div style="flex:1 1 420px;min-width:0">
+      <h2 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(36px,4.8vw,80px);line-height:0.98;color:#571B28">Onde<br />a gente<br />treina</h2>
+      <div style="margin-top:clamp(30px,3.4vw,48px);max-width:400px">
+        <p style="font-size:12px;letter-spacing:0.24em;color:#BE005D">ENDEREÇO</p>
+        <p style="margin-top:12px;font-size:clamp(18px,1.4vw,22px);line-height:1.5;color:#28181B">Rua Dom Bosco, 107<br />Centro, Rio do Sul, SC<br />89160-210</p>
       </div>
-      <div style="marginTop:clamp(28px,3vw,40px);paddingTop:clamp(24px,2.6vw,32px);borderTop:1px solid rgba(87,27,40,0.2);maxWidth:400px">
-        <p style="fontSize:12px;letterSpacing:0.24em;color:#BE005D">HORÁRIOS</p>
-        <p style="marginTop:12px;fontSize:17px;lineHeight:1.6;color:#28181B">Segunda a sexta, das 06h às 22h<br />Sábado e domingo, fechado</p>
-        <p style="marginTop:10px;fontSize:15px;lineHeight:1.6;color:rgba(40,24,27,0.72)">Atendimento presencial, com agendamento.</p>
+      <div style="margin-top:clamp(28px,3vw,40px);padding-top:clamp(24px,2.6vw,32px);border-top:1px solid rgba(87,27,40,0.2);max-width:400px">
+        <p style="font-size:12px;letter-spacing:0.24em;color:#BE005D">HORÁRIOS</p>
+        <p style="margin-top:12px;font-size:17px;line-height:1.6;color:#28181B">Segunda a sexta, das 06h às 22h<br />Sábado e domingo, fechado</p>
+        <p style="margin-top:10px;font-size:15px;line-height:1.6;color:rgba(40,24,27,0.72)">Atendimento presencial, com agendamento.</p>
       </div>
-      <div style="marginTop:clamp(30px,3vw,44px);display:flex;alignItems:center;gap:14px">
-        <a href="https://wa.me/5547988482122?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Studio%20Thais%20Valle%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20para%20mulheres." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp" title="WhatsApp" style="display:inline-flex;alignItems:center;justifyContent:center;width:56px;height:56px;borderRadius:999px;background:#571B28;transition:background 320ms ease" style-hover="background:#BE005D">
+      <div style="margin-top:clamp(30px,3vw,44px);display:flex;align-items:center;gap:14px">
+        <a href="https://wa.me/5547988482122?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Studio%20Thais%20Valle%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20para%20mulheres." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp" title="WhatsApp" style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:999px;background:#571B28;transition:background 320ms ease" style-hover="background:#BE005D">
           <img src="https://cdn.simpleicons.org/whatsapp/F1E7D9" alt="WhatsApp" width="24" height="24" />
         </a>
-        <a href="https://www.instagram.com/personal_studioparamulheres" target="_blank" rel="noopener" aria-label="Instagram do Studio" title="Instagram" style="display:inline-flex;alignItems:center;justifyContent:center;width:56px;height:56px;borderRadius:999px;border:1px solid #571B28;transition:background 320ms ease" style-hover="background:#571B28">
+        <a href="https://www.instagram.com/personal_studioparamulheres" target="_blank" rel="noopener" aria-label="Instagram do Studio" title="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:999px;border:1px solid #571B28;transition:background 320ms ease" style-hover="background:#571B28">
           <img src="https://cdn.simpleicons.org/instagram/571B28" alt="Instagram" width="24" height="24" />
         </a>
       </div>
     </div>
     <sc-if value="{{ showMap }}" hint-placeholder-val="{{ true }}">
-      <div style="flex:1 1 380px;minWidth:0">
-        <div style="width:100%;height:100%;minHeight:360px;overflow:hidden;borderRadius:2px;border:1px solid rgba(87,27,40,0.18)">
-          <iframe src="https://www.google.com/maps?q=Rua%20Dom%20Bosco%2C%20107%2C%20Centro%2C%20Rio%20do%20Sul%20-%20SC&output=embed" title="Mapa da localização do studio na Rua Dom Bosco, 107, Centro, Rio do Sul" loading="lazy" style="width:100%;height:100%;minHeight:360px;border:0;display:block"></iframe>
+      <div style="flex:1 1 380px;min-width:0">
+        <div style="width:100%;height:100%;min-height:360px;overflow:hidden;border-radius:2px;border:1px solid rgba(87,27,40,0.18)">
+          <iframe src="https://www.google.com/maps?q=Rua%20Dom%20Bosco%2C%20107%2C%20Centro%2C%20Rio%20do%20Sul%20-%20SC&output=embed" title="Mapa da localização do studio na Rua Dom Bosco, 107, Centro, Rio do Sul" loading="lazy" style="width:100%;height:100%;min-height:360px;border:0;display:block"></iframe>
         </div>
       </div>
     </sc-if>
@@ -323,35 +327,35 @@
 </section>
 
 <footer style="background:#3E141B;color:#F1E7D9">
-  <div style="maxWidth:1440px;margin:0 auto;padding:clamp(64px,7vw,110px) clamp(20px,6vw,90px) clamp(40px,4vw,60px)">
-    <div style="display:flex;flexWrap:wrap;gap:clamp(32px,5vw,72px);justifyContent:space-between">
-      <div style="flex:1 1 320px;minWidth:0">
-        <div style="fontFamily:'Archivo Black',sans-serif;fontSize:clamp(30px,3.4vw,54px);lineHeight:1;letterSpacing:0.01em">THAIS VALLE</div>
-        <p style="marginTop:14px;fontSize:12px;letterSpacing:0.24em;color:#E9BCCB">PERSONAL STUDIO PARA MULHERES</p>
-        <p style="marginTop:clamp(24px,3vw,36px);maxWidth:360px;fontSize:15.5px;lineHeight:1.65;color:rgba(241,231,217,0.78)">Rua Dom Bosco, 107, Centro, Rio do Sul, SC. Espaço acolhedor para mulheres e para a comunidade LGBTQ+.</p>
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(64px,7vw,110px) clamp(20px,6vw,90px) clamp(40px,4vw,60px)">
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,72px);justify-content:space-between">
+      <div style="flex:1 1 320px;min-width:0">
+        <div style="font-family:'Archivo Black',sans-serif;font-size:clamp(30px,3.4vw,54px);line-height:1;letter-spacing:0.01em">THAIS VALLE</div>
+        <p style="margin-top:14px;font-size:12px;letter-spacing:0.24em;color:#E9BCCB">PERSONAL STUDIO PARA MULHERES</p>
+        <p style="margin-top:clamp(24px,3vw,36px);max-width:360px;font-size:15.5px;line-height:1.65;color:rgba(241,231,217,0.78)">Rua Dom Bosco, 107, Centro, Rio do Sul, SC. Espaço acolhedor para mulheres e para a comunidade LGBTQ+.</p>
       </div>
-      <nav style="flex:0 1 220px;minWidth:0;display:flex;flexDirection:column;gap:14px">
-        <a href="#studio" style="fontSize:15px;color:#F1E7D9" style-hover="color:#E9BCCB">O Studio</a>
-        <a href="#acompanhamento" style="fontSize:15px;color:#F1E7D9" style-hover="color:#E9BCCB">Acompanhamento</a>
-        <a href="#espaco" style="fontSize:15px;color:#F1E7D9" style-hover="color:#E9BCCB">Espaço</a>
-        <a href="#loja" style="fontSize:15px;color:#F1E7D9" style-hover="color:#E9BCCB">Loja</a>
-        <a href="#contato" style="fontSize:15px;color:#F1E7D9" style-hover="color:#E9BCCB">Localização</a>
+      <nav style="flex:0 1 220px;min-width:0;display:flex;flex-direction:column;gap:14px">
+        <a href="#studio" style="font-size:15px;color:#F1E7D9" style-hover="color:#E9BCCB">O Studio</a>
+        <a href="#acompanhamento" style="font-size:15px;color:#F1E7D9" style-hover="color:#E9BCCB">Acompanhamento</a>
+        <a href="#espaco" style="font-size:15px;color:#F1E7D9" style-hover="color:#E9BCCB">Espaço</a>
+        <a href="#loja" style="font-size:15px;color:#F1E7D9" style-hover="color:#E9BCCB">Loja</a>
+        <a href="#contato" style="font-size:15px;color:#F1E7D9" style-hover="color:#E9BCCB">Localização</a>
       </nav>
-      <div style="flex:0 0 auto;display:flex;alignItems:flex-start;gap:12px">
-        <a href="https://wa.me/5547988482122?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Studio%20Thais%20Valle%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20para%20mulheres." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp" title="WhatsApp" style="display:inline-flex;alignItems:center;justifyContent:center;width:52px;height:52px;borderRadius:999px;background:#BE005D;transition:background 320ms ease" style-hover="background:#F1E7D9">
+      <div style="flex:0 0 auto;display:flex;align-items:flex-start;gap:12px">
+        <a href="https://wa.me/5547988482122?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Studio%20Thais%20Valle%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20para%20mulheres." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp" title="WhatsApp" style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:999px;background:#BE005D;transition:background 320ms ease" style-hover="background:#F1E7D9">
           <img src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt="WhatsApp" width="22" height="22" />
         </a>
-        <a href="https://www.instagram.com/personal_studioparamulheres" target="_blank" rel="noopener" aria-label="Instagram do Studio" title="Instagram" style="display:inline-flex;alignItems:center;justifyContent:center;width:52px;height:52px;borderRadius:999px;border:1px solid rgba(241,231,217,0.4)" style-hover="background:rgba(241,231,217,0.12)">
+        <a href="https://www.instagram.com/personal_studioparamulheres" target="_blank" rel="noopener" aria-label="Instagram do Studio" title="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:999px;border:1px solid rgba(241,231,217,0.4)" style-hover="background:rgba(241,231,217,0.12)">
           <img src="https://cdn.simpleicons.org/instagram/F1E7D9" alt="Instagram" width="22" height="22" />
         </a>
       </div>
     </div>
-    <p style="marginTop:clamp(48px,6vw,88px);paddingTop:24px;borderTop:1px solid rgba(241,231,217,0.18);fontSize:12.5px;letterSpacing:0.1em;color:rgba(241,231,217,0.6)">© 2026 THAIS VALLE PERSONAL STUDIO PARA MULHERES</p>
+    <p style="margin-top:clamp(48px,6vw,88px);padding-top:24px;border-top:1px solid rgba(241,231,217,0.18);font-size:12.5px;letter-spacing:0.1em;color:rgba(241,231,217,0.6)">© 2026 THAIS VALLE PERSONAL STUDIO PARA MULHERES</p>
   </div>
 </footer>
 
 <sc-if value="{{ showFloatingCta }}" hint-placeholder-val="{{ true }}">
-  <a href="https://wa.me/5547988482122?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Studio%20Thais%20Valle%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20para%20mulheres." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp" title="Conversar no WhatsApp" style="position:fixed;right:20px;bottom:20px;zIndex:70;display:inline-flex;alignItems:center;justifyContent:center;width:60px;height:60px;borderRadius:999px;background:#BE005D;boxShadow:0 8px 28px rgba(62,20,27,0.22);transition:background 320ms ease,transform 320ms ease" style-hover="background:#571B28;transform:scale(1.05)">
+  <a href="https://wa.me/5547988482122?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Studio%20Thais%20Valle%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20para%20mulheres." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp" title="Conversar no WhatsApp" style="position:fixed;right:20px;bottom:20px;z-index:70;display:inline-flex;align-items:center;justify-content:center;width:60px;height:60px;border-radius:999px;background:#BE005D;box-shadow:0 8px 28px rgba(62,20,27,0.22);transition:background 320ms ease,transform 320ms ease" style-hover="background:#571B28;transform:scale(1.05)">
     <img src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt="WhatsApp" width="28" height="28" />
   </a>
 </sc-if>
@@ -362,31 +366,91 @@
 class Component extends DCLogic {
   state = { menuOpen: false, narrow: false };
 
+  lockBodyScroll() {
+    if (typeof document === 'undefined' || !document.body) return;
+    if (this._previousBodyOverflow === undefined) {
+      this._previousBodyOverflow = document.body.style.overflow;
+    }
+    document.body.style.overflow = 'hidden';
+  }
+
+  unlockBodyScroll() {
+    if (typeof document === 'undefined' || !document.body) return;
+    document.body.style.overflow = this._previousBodyOverflow ?? '';
+    this._previousBodyOverflow = undefined;
+  }
+
+  openMobileMenu() {
+    if (typeof document !== 'undefined') {
+      this._menuTrigger = document.activeElement;
+    }
+    this.lockBodyScroll();
+    this.setState({ menuOpen: true });
+  }
+
+  closeMobileMenu({ restoreFocus = false } = {}) {
+    const trigger = this._menuTrigger;
+    this.unlockBodyScroll();
+    this.setState({ menuOpen: false });
+    this._menuTrigger = null;
+
+    if (restoreFocus && typeof requestAnimationFrame === 'function') {
+      requestAnimationFrame(() => {
+        if (trigger && trigger.isConnected && typeof trigger.focus === 'function') {
+          trigger.focus();
+        }
+      });
+    }
+  }
+
   componentDidMount() {
     this.check = () => {
       const narrow = window.innerWidth < 900;
-      if (narrow !== this.state.narrow) this.setState({ narrow, menuOpen: narrow && this.state.menuOpen });
+
+      if (!narrow && this.state.menuOpen) {
+        this.unlockBodyScroll();
+        this._menuTrigger = null;
+      }
+
+      if (narrow !== this.state.narrow) {
+        this.setState({ narrow, menuOpen: narrow && this.state.menuOpen });
+      }
     };
+
+    this.onKeyDown = (event) => {
+      if (event.key === 'Escape' && this.state.menuOpen) {
+        this.closeMobileMenu({ restoreFocus: true });
+      }
+    };
+
     this.check();
     window.addEventListener('resize', this.check);
+    document.addEventListener('keydown', this.onKeyDown);
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.check);
+    document.removeEventListener('keydown', this.onKeyDown);
+    this.unlockBodyScroll();
   }
 
   renderVals() {
-    const hero = this.props.fotoDaHero ?? 'retrato';
+    const requestedHero = this.props.fotoDaHero;
+    const hero = requestedHero === 'ambiente' ? 'ambiente' : 'retrato';
+    const showMap = typeof this.props.mostrarMapa === 'boolean' ? this.props.mostrarMapa : true;
+    const showFloatingCta = typeof this.props.botaoFlutuante === 'boolean' ? this.props.botaoFlutuante : true;
+
     return {
       isNarrow: this.state.narrow,
       isWide: !this.state.narrow,
       menuOpen: this.state.menuOpen,
-      openMenu: () => this.setState({ menuOpen: true }),
-      closeMenu: () => this.setState({ menuOpen: false }),
+      openMenu: () => this.openMobileMenu(),
+      closeMenu: () => this.closeMobileMenu({ restoreFocus: false }),
+      closeMenuAndRestoreFocus: () => this.closeMobileMenu({ restoreFocus: true }),
       heroRetrato: hero === 'retrato',
       heroAmbiente: hero === 'ambiente',
-      showMap: this.props.mostrarMapa ?? true,
-      showFloatingCta: this.props.botaoFlutuante ?? true
+      showMap,
+      showFloatingCta
     };
   }
 }
